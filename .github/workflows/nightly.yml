@@ -39,3 +39,9 @@ jobs:
           title: 'ci: update Astro'
           body: Update Astro and packages to latest version
           labels: ci
+
+      - name: Build
+        run: pnpm build
+      
+        - name: List files
+          run: ls -la
