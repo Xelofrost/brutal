@@ -43,5 +43,5 @@ jobs:
       - name: Build
         run: pnpm build
       
-        - name: List files
-          run: ls -la
+      - name: List files
+        run: ls -la
