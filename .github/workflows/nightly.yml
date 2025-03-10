@@ -1,8 +1,9 @@
 name: nightly
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
+    branches:
+      - master
 
 jobs:
   upgrade:
@@ -40,6 +41,8 @@ jobs:
           body: Update Astro and packages to latest version
           labels: ci
 
+      - name: Build
+        run: pnpm build
 
       - name: List files
         run: ls -la
